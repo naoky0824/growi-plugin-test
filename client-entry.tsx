@@ -1,7 +1,8 @@
-import { withCopyButton } from './src/CodeWithCopyButton';
-import loggerFactory from './src/loggerFactory';
+// import { withCopyButton } from './src/CodeWithCopyButton';
+import { withAISearch } from './src/NavWithAISearch';
+// import loggerFactory from './src/loggerFactory';
 
-const logger = loggerFactory('growi:plugin:growi-plugin-test');
+// const logger = loggerFactory('growi:plugin:growi-plugin-test');
 
 declare const growiFacade: any;
 
@@ -14,11 +15,13 @@ const activate = (): void => {
 
   optionsGenerators.customGenerateViewOptions = (...args: any[]) => {
     const options = optionsGenerators.generateViewOptions(...args);
-    const Code = options.components.code;
-    logger.debug(Code);
+    // const Code = options.components.code;
+    const Nav = options.components.nav;
+    // logger.debug(Code);
 
     // replace
-    options.components.code = withCopyButton(Code);
+    // options.components.code = withCopyButton(Code);
+    options.components.code = withAISearch(Nav);
 
     return options;
   };
