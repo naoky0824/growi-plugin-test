@@ -1,5 +1,5 @@
 import { withCopyButton } from './src/CodeWithCopyButton';
-// import { withAISearch } from './src/NavWithAISearch';
+import { withAISearch } from './src/NavWithAISearch';
 
 
 declare const growiFacade: any;
@@ -13,12 +13,12 @@ const activate = (): void => {
 
   optionsGenerators.customGenerateViewOptions = (...args: any[]) => {
     const options = optionsGenerators.generateViewOptions(...args);
-    const Code = options.components.code;
-    // const Nav = options.components.nav;
+    // const Code = options.components.code;
+    const Nav = options.components.nav;
 
     // replace
-    options.components.code = withCopyButton(Code);
-    // options.components.code = withAISearch(Nav);
+    // options.components.code = withCopyButton(Code);
+    options.components.code = withAISearch(Nav);
 
     return options;
   };
