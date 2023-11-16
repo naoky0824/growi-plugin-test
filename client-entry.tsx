@@ -14,7 +14,7 @@ const activate = (): void => {
   optionsGenerators.customGenerateViewOptions = (...args: any[]) => {
     const options = optionsGenerators.generateViewOptions(...args);
     // const Code = options.components.code;
-    alert(options.components);
+    console.log(options.components);
     const Nav = options.components.nav;
 
     // replace
