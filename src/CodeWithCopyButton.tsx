@@ -13,7 +13,7 @@ const CopyButton = ({ text }: { text: string }): JSX.Element => {
       data-toggle="tooltip" data-placement="top" title="Copy to clipboard"
       onClick={clickHandler}
     >
-      COPY
+      cop
     </button>
   );
 };

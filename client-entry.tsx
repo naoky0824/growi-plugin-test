@@ -1,5 +1,5 @@
 import { withCopyButton } from './src/CodeWithCopyButton';
-import { withAISearch } from './src/NavWithAISearch';
+// import { withAISearch } from './src/NavWithAISearch';
 // import loggerFactory from './src/loggerFactory';
 
 // const logger = loggerFactory('growi:plugin:growi-plugin-test');
