@@ -14,12 +14,15 @@ const activate = (): void => {
   optionsGenerators.customGenerateViewOptions = (...args: any[]) => {
     const options = optionsGenerators.generateViewOptions(...args);
     // const Code = options.components.code;
+    console.log("options");
+    console.log(options);
+    console.log("options.components");
     console.log(options.components);
-    const Nav = options.components.nav;
+    // const Nav = options.components.nav;
 
     // replace
     // options.components.code = withCopyButton(Code);
-    options.components.code = withAISearch(Nav);
+    // options.components.code = withAISearch(Nav);
 
     return options;
   };
