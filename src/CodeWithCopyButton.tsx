@@ -10,10 +10,10 @@ const CopyButton = ({ text }: { text: string }): JSX.Element => {
   return (
     <button
       className="btn btn-sm btn-copy btn-outline-secondary border-0 text-muted"
-      data-toggle="tooltip" data-placement="top" title="Copy to clipboard"
+      data-toggle="tooltip" data-placement="top" title="CCCopy to clipboard"
       onClick={clickHandler}
     >
-      cop
+      opy
     </button>
   );
 };
