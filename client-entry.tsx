@@ -29,25 +29,31 @@ const activate = (): void => {
     // options.components.code = withAISearch(Nav);
 
     const navbar = document.getElementById('grw-navbar');
-    const grwAppTitle = navbar?.getElementsByClassName('grw-app-title')[0];
-    const fragment = document.createDocumentFragment();
-    const aisearchDivEle = document.createElement("div");
-    const aisearchInputEle = document.createElement("input");
-    aisearchDivEle.id = 'grw-ai-search';
-    aisearchDivEle.className = 'grw-ai-search-container';
-    aisearchInputEle.className = 'form-control';
-    aisearchInputEle.type = 'text';
-    aisearchInputEle.placeholder = 'AI-Search ...';
-    aisearchInputEle.autocomplete = 'off';
-    aisearchInputEle.ariaAutoComplete = 'both';
-    aisearchInputEle.ariaExpanded = 'true';
-    aisearchInputEle.ariaHasPopup = 'listbox';
-    // aisearchInputEle.role = 'combobox';
-    const search = fragment
-      .appendChild(aisearchDivEle)
-      .appendChild(aisearchInputEle)
-    grwAppTitle?.after(fragment);
 
+    const kizonAiSearch = document.getElementById('grw-ai-search');
+    console.log(kizonAiSearch);
+    
+    if (kizonAiSearch===null || kizonAiSearch===undefined) {
+      const grwAppTitle = navbar?.getElementsByClassName('grw-app-title')[0];
+      const fragment = document.createDocumentFragment();
+  
+      const aisearchDivEle = document.createElement("div");
+      const aisearchInputEle = document.createElement("input");
+      aisearchDivEle.id = 'grw-ai-search';
+      aisearchDivEle.className = 'grw-ai-search-container';
+      aisearchInputEle.className = 'form-control';
+      aisearchInputEle.type = 'text';
+      aisearchInputEle.placeholder = 'AI-Search ...';
+      aisearchInputEle.autocomplete = 'off';
+      aisearchInputEle.ariaAutoComplete = 'both';
+      aisearchInputEle.ariaExpanded = 'true';
+      aisearchInputEle.ariaHasPopup = 'listbox';
+      // aisearchInputEle.role = 'combobox';
+      const search = fragment
+        .appendChild(aisearchDivEle)
+        .appendChild(aisearchInputEle)
+      grwAppTitle?.after(fragment);
+    }
     return options;
   };
 };
