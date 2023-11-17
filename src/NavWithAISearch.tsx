@@ -11,14 +11,14 @@ const AISearch = ({ text }: { text: string }): JSX.Element => {
   return (
     <input
       autoComplete="off"
-      placeholder="Search ..."
+      placeholder="AI-Search ..."
       type="text"
       aria-autocomplete="both"
       aria-expanded="true"
       aria-haspopup="listbox"
       aria-owns="search-typeahead-asynctypeahead"
       role="combobox"
-      // class="rbt-input-main form-control rbt-input"
+      className="grw-ai-search-container rbt-input-main form-control rbt-input"
       value=""
     ></input>
   );
