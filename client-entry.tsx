@@ -13,6 +13,9 @@ const activate = (): void => {
 
   optionsGenerators.customGenerateViewOptions = (...args: any[]) => {
     const options = optionsGenerators.generateViewOptions(...args);
+    const optionPrev = optionsGenerators.generatePreviewOptions(...args);
+    console.log("optionPrev");
+    console.log(optionPrev)
     // const Code = options.components.code;
     console.log("options");
     console.log(options);
@@ -23,6 +26,15 @@ const activate = (): void => {
     // replace
     // options.components.code = withCopyButton(Code);
     // options.components.code = withAISearch(Nav);
+
+    const navbar = document.getElementById("grw-navbar");
+    const fragment = document.createDocumentFragment();
+    const li = fragment
+      .appendChild(document.createElement("section"))
+      .appendChild(document.createElement("ul"))
+      .appendChild(document.createElement("li"));
+    li.textContent = "　＜ここにAI検索を配置＞　";
+    navbar?.appendChild(fragment);
 
     return options;
   };
