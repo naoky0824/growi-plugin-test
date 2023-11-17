@@ -28,13 +28,13 @@ const activate = (): void => {
     // options.components.code = withAISearch(Nav);
 
     const navbar = document.getElementById('grw-navbar');
-    const grwAppTitle = document.getElementsByClassName('grw-app-title')[0];
+    const grwAppTitle = navbar?.getElementsByClassName('grw-app-title')[0];
     const fragment = document.createDocumentFragment();
     const search = fragment
       .appendChild(document.createElement("div"))
       .appendChild(document.createElement("ul"))
     search.textContent = "　＜ここにAI検索を配置＞　";
-    grwAppTitle.insertBefore(fragment, grwAppTitle.nextSibling);
+    grwAppTitle?.after(fragment);
 
     return options;
   };
