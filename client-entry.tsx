@@ -73,9 +73,9 @@ const activate = (): void => {
       aisearchIEle.className = 'material-icons';
       aisearchIEle.textContent = 'search'
       const searchBtn = searchBtnFragment
-        .appendChild(aisearchBtnEle)
         .appendChild(aisearchIEle)
-      sidebarNav.appendChild(searchBtn)
+        .appendChild(aisearchBtnEle)
+      sidebarNav.appendChild(searchBtnFragment)
     }
 
     return options;
