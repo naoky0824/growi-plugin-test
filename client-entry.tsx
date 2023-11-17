@@ -27,14 +27,14 @@ const activate = (): void => {
     // options.components.code = withCopyButton(Code);
     // options.components.code = withAISearch(Nav);
 
-    const navbar = document.getElementById("grw-navbar");
+    const navbar = document.getElementById('grw-navbar');
+    const grwAppTitle = document.getElementsByClassName('grw-app-title')[0];
     const fragment = document.createDocumentFragment();
-    const li = fragment
-      .appendChild(document.createElement("section"))
+    const search = fragment
+      .appendChild(document.createElement("div"))
       .appendChild(document.createElement("ul"))
-      .appendChild(document.createElement("li"));
-    li.textContent = "　＜ここにAI検索を配置＞　";
-    navbar?.appendChild(fragment);
+    search.textContent = "　＜ここにAI検索を配置＞　";
+    grwAppTitle.insertBefore(fragment, grwAppTitle.nextSibling);
 
     return options;
   };
