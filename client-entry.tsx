@@ -33,8 +33,9 @@ const activate = (): void => {
     const fragment = document.createDocumentFragment();
     const aisearchDivEle = document.createElement("div");
     const aisearchInputEle = document.createElement("input");
-    aisearchInputEle.id = 'grw-ai-search'
-    aisearchInputEle.className = 'grw-ai-search-container form-control';
+    aisearchDivEle.id = 'grw-ai-search';
+    aisearchDivEle.className = 'grw-ai-search-container';
+    aisearchInputEle.className = 'form-control';
     aisearchInputEle.type = 'text';
     aisearchInputEle.placeholder = 'AI-Search ...';
     aisearchInputEle.autocomplete = 'off';
